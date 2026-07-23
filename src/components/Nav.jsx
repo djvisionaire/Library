@@ -8,7 +8,7 @@ const Nav = () => {
         <nav>
             <div className="nav__container">
                 <a href="/">
-                    <img src="{LibraryLogo}" alt="" className="logo" />
+                    <img src={LibraryLogo} alt="Library" className="logo" />
                 </a>
                 <ul className="nav__links">
                     <li className="nav__list">
@@ -22,7 +22,7 @@ const Nav = () => {
                     </button>
                     <li className="nav_icon">
                         <a href="/cart" className="nav__link" >
-                            <FontAwesomeIcon icon="shopping-cart" />
+                            <FontAwesomeIcon icon={faShoppingCart} />
                         </a>
                         <span className="cart__length">2</span>
                     </li>
