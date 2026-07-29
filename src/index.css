@@ -279,6 +279,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .no-cursor {
@@ -293,6 +294,7 @@ HIGHLIGHTS
 #highlights {
   position: relative;
   max-width: 100vw;
+
 }
 
 #highlights:after,
@@ -456,6 +458,7 @@ EXPLORE
 #explore {
   background-color: rgba(115, 66, 214, 0.1);
 }
+
 
 /* 
 
