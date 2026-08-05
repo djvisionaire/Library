@@ -11,10 +11,46 @@ const Cart = () => {
                         </div>
                         <div className="cart">
                             <div className="cart__header">
-                                <div className="cart__book">Book</div>
-                                <div className="cart__quanity">Quanity</div>
-                                <div className="cart__total">Book</div>
+                                <span className="cart__book">Book</span>
+                                <span className="cart__quanity">Quanity</span>
+                                <span className="cart__total">Price</span>
                             </div>
+                            <div className="cart"__body>
+                                <div className="cart__item">
+                                    <div className="cart__book">
+                                        <img src="https://m.media-amazon.com/images/I/61mIq2iJUXL._AC_UF1000,1000_QL80_.jpg" className="cart__book--img" alt="" />
+                                        <div className="cart__book--info">
+                                            <span className="cart__book--title">
+                                                crack the coding interview
+                                            </span>
+                                            <span className="cart__book--price">$10</span>
+                                            <button className="cart__book--remove">Remove</button>
+                                        </div>
+                                        <div className="cart__quanity">
+                                            <input type="number" min={0} max={99} className="cart__input" />
+                                        </div>
+                                        <div className="cart__total">
+                                            $10.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="total">
+                            <div className="total__item total__sub-total">
+                                <span>Subtotal:</span>>
+                                Proceed to checkout
+                                <span>$9.00</span>
+                            </div>
+                             <div className="total__item total__tax">
+                                <span>Tax:</span>
+                                <span>$1.00</span>
+                            </div>
+                             <div className="total__item total__price">
+                                <span>Total:</span>
+                                <span>$10.00</span>
+                            </div>
+                            <button className="btn__checkout no-cursor">Proceed to checkout</button>
                         </div>
                     </div>
                 </div>

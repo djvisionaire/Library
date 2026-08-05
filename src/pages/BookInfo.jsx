@@ -1,13 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import Rating from '../components/Rating';
 import Price from '../components/price';
 
 
-const BookInfo = ({ books }) => {
+const BookInfo = ({ books, addToCart, cart }) => {
     const { id } = useParams();
-    const book = books.find(book => +book.id === +id);
+    const book = books.find((book) => +book.id === +id);
+
+    function addBookToCart(book) {
+        addToCart(book);
+    }
+
+    function bookExistOnCart() {
+        return cart.find(book => book.id === +id);
+    }
     
     return (
         <div id="books__body">
@@ -29,7 +37,7 @@ const BookInfo = ({ books }) => {
                         </figure>
                         <div className='book__selected--description'>
                             <h2 className='book__selected--title'> {book.title} </h2>
-                            <Rating rating={book.Rating} />
+                            <Rating rating={book.rating} />
                             <div className='book__selected--price'>
                                 <Price originalPrice={book.originalPrice} salePrice={book.salePrice} /> 
                             </div>
@@ -41,9 +49,15 @@ const BookInfo = ({ books }) => {
                                     paragraph about book here
                                 </p>
                             </div>
-                            <button className='btn'>
+                            {bookExistOnCart() ? (
+                                <Link to={`/cart`} className='book__link'>
+                                <button className='btn'>CheckOut</button>
+                                </Link>
+                            ) : (
+                            <button className='btn' onClick={() => addBookToCart(book)}>
                                 Add to cart
                             </button>
+                                )}
                         </div>
                     </div>
                     <div className='books__container'>
