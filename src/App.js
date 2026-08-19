@@ -42,7 +42,7 @@ function App() {
   return (
 <Router>
     <div className="App">
-      <Nav numberOfItemsInCart={numberofItemsInCart()} />
+      <Nav numberofItemsInCart={numberofItemsInCart()} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Books" element={<Books books={books} />} />
