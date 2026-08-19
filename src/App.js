@@ -1,15 +1,15 @@
-
+ 
 import Nav from "./components/Nav";
 import React, {useEffect, useState} from "react";
 import { books } from "./data";
-import footer from "./components/footer.jsx";
+import footer from "./components/footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import BookInfo from "./pages/BookInfo";
 import Cart from "./pages/Cart"
-import { faChartColumn } from "@fortawesome/free-solid-svg-icons";
+//import { fachartcolumn } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [cart, setCart] = useState([]);

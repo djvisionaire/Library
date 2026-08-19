@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import emptyCart from "../assets/empty_cart.svg";
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
@@ -73,7 +73,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
               </div>
               {cart.length === 0 && (
                 <div className="cart__empty">
-                  <img src={emptyCart} className="cart__image" />
+                  <img src={emptyCart} className="cart__image" alt="Empty cart" />
                   <h2>You don't have any books in your cart!</h2>
                   <link to="/Books">
                     <button className="btn">Browse books</button>

@@ -4,7 +4,6 @@ import Highlights from "../components/Highlights";
 import Featured from "../components/Featured";
 import Discounted from "../components/Discounted";
 import Explore from "../components/Explore";
-import Books from './Books';
 
 const Home = () => {
     return (

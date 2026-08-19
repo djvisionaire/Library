@@ -3,9 +3,7 @@ import Book from './Book';
 import { books } from '../data';
 
 const Featured = () => {
-    function getFiveStarBooks() {
-        
-    }
+    
     
     return (
         <div>
