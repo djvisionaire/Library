@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from "../assets/Library.svg" 
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const footer = () => {
     return (
         <footer>
             <div className="container">
@@ -24,4 +24,4 @@ const Footer = () => {
         </footer>
     );
 }
-export default Footer;
+export default footer;
