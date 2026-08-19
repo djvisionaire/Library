@@ -2,7 +2,7 @@
 import Nav from "./components/Nav";
 import React, {useEffect, useState} from "react";
 import { books } from "./data";
-import footer from "./components/footer";
+import footer from "./components/footer.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from "./pages/Home";
