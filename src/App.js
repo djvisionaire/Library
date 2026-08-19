@@ -3,7 +3,8 @@ import Nav from "./components/Nav";
 import React, {useEffect, useState} from "react";
 import { books } from "./data";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import BookInfo from "./pages/BookInfo";
@@ -32,24 +33,26 @@ function App() {
   function removeItem(item) {
     setCart(cart.filter(book => book.id !== item.id))
     console.log('remove item',item);
-
+  }
 
   useEffect(() => {
     console.log(cart);
   }, [cart])
 
   return (
-    <Router>
+<Router>
     <div className="App">
-      <Nav numberofItemsInCart={numberofItemsInCart()} />
-      <Route path="/" exact component={Home} />
-      <Route path="/Books" exact render={() => <Books books={books} />} />
-      <Route path="/Books/:id" render={() => <BookInfo books={books} addToCart={addToCart} cart={cart} />} />
-      <Route path="/cart" exact render={() => <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
-      <Home />
+      <Nav numberOfItemsInCart={numberofItemsInCart()} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Books" element={<Books books={books} />} />
+        <Route path="/Books/:id" element={<BookInfo books={books} addToCart={addToCart} cart={cart} />} />
+        <Route path="/cart" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
+      </Routes>
       <Footer />
     </div>
     </Router>
+
   );
 }
 
