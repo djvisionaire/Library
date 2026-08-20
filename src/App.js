@@ -2,7 +2,7 @@
 import Nav from "./components/Nav";
 import React, {useEffect, useState} from "react";
 import { books } from "./data";
-import footer from "./components/footer";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from "./pages/Home";
@@ -49,7 +49,7 @@ function App() {
         <Route path="/Books/:id" element={<BookInfo books={books} addToCart={addToCart} cart={cart} />} />
         <Route path="/cart" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
       </Routes>
-      <footer />
+      <Footer />
     </div>
     </Router>
 
